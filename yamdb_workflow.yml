@@ -58,7 +58,9 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |            
             sudo docker-compose stop
-            sudo docker-compose rm web           
+            sudo docker-compose rm web
+            sudo docker rmi $(sudo docker images 'denis3232/yamdb_final' -q)
+            rm .env           
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
