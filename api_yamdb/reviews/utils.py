@@ -1,5 +1,5 @@
-from rest_framework import serializers
 from django.utils import timezone
+from rest_framework import serializers
 
 INVALID_NAME = ['me', 'Me', 'ME']
 

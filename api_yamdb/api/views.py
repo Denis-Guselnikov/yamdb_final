@@ -1,25 +1,25 @@
-from django.db.models import Avg
+from api.permissions import (AdminOrReadOnlyPermission, IsAdminOnly,
+                             ReviewCommentsPermission)
+from api.serializers import (CategorySerializer, CommentsSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             SignUpSerializer, TitleSerializer,
+                             TitlesSerializer, TokenGetSerializer,
+                             UserAuthorSerializer, UserSerializer)
+from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
+from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from django.conf import settings
-from rest_framework import filters, status, viewsets, mixins
+from rest_framework import filters, mixins, status, viewsets
+from rest_framework.decorators import action, api_view
+from rest_framework.filters import SearchFilter
 from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
-from rest_framework.filters import SearchFilter
 from rest_framework.response import Response
-from rest_framework.decorators import api_view, action
 from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Title, User
 
-from api.serializers import (SignUpSerializer, TokenGetSerializer,
-                             CategorySerializer, UserAuthorSerializer,
-                             UserSerializer, GenreSerializer,
-                             TitleSerializer, TitlesSerializer,
-                             ReviewSerializer, CommentsSerializer)
-from api.permissions import (IsAdminOnly, AdminOrReadOnlyPermission,
-                             ReviewCommentsPermission)
-from reviews.models import User, Category, Genre, Title
 from .filters import TitleFilter
 
 
