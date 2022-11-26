@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:       
-    image: denis3232/yamdb:v1 
+    image: denis3232/yamdb:latest 
     restart: always
     volumes:
       - static_value:/app/static/      
