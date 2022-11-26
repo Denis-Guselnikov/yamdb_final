@@ -121,6 +121,6 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ## Документация и админ-панель api_yamdb
 ```
-Документация доступна по эндпойнту: http://62.84.118.75/redoc/
-Админ-панель: http://62.84.118.75/admin/
+Документация доступна по эндпойнту: http://51.250.20.103/redoc/
+Админ-панель: http://51.250.20.103/admin/
 ```
