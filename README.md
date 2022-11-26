@@ -105,9 +105,18 @@ SECRET_KEY=secret_key
 
 ### Когда сделаете git push - workflow начнёт работать
 
+### Выполните по очереди команды:
+Создать миграции:
+```
+docker-compose exec web python manage.py migrate
+```
 Создать суперпользователя
 ```
 docker-compose exec web python manage.py createsuperuser
+```
+Статические данные:
+```
+docker-compose exec web python manage.py collectstatic --no-input
 ```
 
 ## Документация и админ-панель api_yamdb
