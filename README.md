@@ -102,9 +102,16 @@ DB_PORT=5432  # порт для подключения к БД
 SECRET_KEY=secret_key
 ```
 
+
 ### Когда сделаете git push - workflow начнёт работать
 
 Создать суперпользователя
 ```
 docker-compose exec web python manage.py createsuperuser
+```
+
+## Документация и админ-панель api_yamdb
+```
+Документация доступна по эндпойнту: http://api_yamdb/redoc/
+Админ-панель: http://api_yamdb/admin/
 ```
