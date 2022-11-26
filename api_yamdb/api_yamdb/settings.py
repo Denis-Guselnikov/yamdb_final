@@ -11,7 +11,12 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='0981236547382101My123Secret!##')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '62.84.118.75',
+    'localhost',
+    '127.0.0.1',
+    '*'
+]
 
 AUTH_USER_MODEL = 'reviews.User'
 
