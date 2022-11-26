@@ -112,6 +112,6 @@ docker-compose exec web python manage.py createsuperuser
 
 ## Документация и админ-панель api_yamdb
 ```
-Документация доступна по эндпойнту: http://api_yamdb/redoc/
-Админ-панель: http://api_yamdb/admin/
+Документация доступна по эндпойнту: http://158.160.46.110/redoc/
+Админ-панель: http://158.160.46.110/admin/
 ```
